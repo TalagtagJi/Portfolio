@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="images" href="Background/logo.png">
+
+    <!--custom css link--->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!--box icon link--->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!--google fonts link--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!--magnific-popup css cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+</head>
+<body>
+
+    <!--Header Section--->
+    <header>
+        <a href="#" class="logo"> <img src="Background/logo.png"></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <!--Hero Section--->
+    <section class="home" id="home">
+        <div class="hero-text">
+            <h3>Hello I'm</h3>
+            <h1>Hajji Talagtag</h1>
+            <h4>Artist</h4>
+            <a href="#gallery" class="btn">Gallery</a>
+        </div>
+    </section>
+
+    <!--about Section--->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="Background/me copy.png">
+        </div>
+
+        <div class="about-text">
+            <h2>About Me</h2>
+            <h5>I am Traditional Artist, <span>Editor, and Photographer</span></h5>
+            <p>I am a passionate traditional artist, dedicated to capturing the beauty of the world through the stroke of a brush, 
+            the pencil on paper, or the delicate touch of charcoal. And Also As an editor, I thrive on refining and perfecting the written word. Lastly Photography is my means of freezing moments in time, 
+            capturing the essence of fleeting emotions, landscapes, and stories through the lens of a camera. Combining my skills as a traditional artist, editor, and photographer,
+            I aim to create a harmonious blend of visual and written artistry. Thank you for visiting my creative world, and I look forward to sharing my artistic journey with you</p>
+            <a href="#contact" class="btn">Hire Me</a>    
+            <script>
+                const header = document.querySelector("header");
+
+                window.addEventListener ("scroll", function() {
+                    header.classList.toggle ("sticky", window.scrollY > 200)
+                });
+
+                let menu = document.querySelector('#menu-icon');
+                let navlist = document.querySelector('.navlist');
+
+                menu.onclick = () => {
+                    menu.classList.toggle('bx-x');
+                    navlist.classList.toggle('open');
+                };
+
+                window.onscroll = () => {
+                    menu.classList.remove('bx-x');
+                    navlist.classList.remove('open');
+                };
+            </script>
+        </div>
+    </section>
+
+    <!--Services Section --->
+    <section class="service" id="service">
+        <div class="text-center">
+            <h2>My Services</h2>
+            <h4>I can also teach you how to draw, edit and photograph.</h4>
+        </div>
+
+        <div class="service-item">
+            <div class="service-box">
+                <i class='bx bxs-paint'></i>
+                <h3>Traditional Art</h3>
+                <p>We will teach you on How to draw, paint, sketch.</p>
+                <p>You can also view some of My Artworks</p>
+                <a href="#gallery" class="s-bttn">View</a>
+            </div>
+
+            <div class="service-box">
+                <i class='bx bx-laptop'></i>
+                <h3>Edit</h3>
+                <p>We also teach you in editing</p>
+                <p>You can also view some of My Edits</p>
+                <a href="#gallery" class="s-bttn">View</a>
+            </div>
+
+            <div class="service-box">
+                <i class='bx bx-camera' ></i>
+                <h3>Photography</h3>
+                <p>We give you some tips about Photography</p>
+                <p>You can also view some of My Captured Photo</p>
+                <a href="#gallery" class="s-bttn">View</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Gallery Section--->
+    <section class="gallery" id="gallery">
+        <div class="gallery">
+
+            <ul class="controls">
+                <li class="buttons active" data-filter="all">All</li>
+                <li class="buttons" data-filter="Artworks">Artworks</li>
+                <li class="buttons" data-filter="Edits">Edits</li>
+                <li class="buttons" data-filter="Photography">Photography</li>
+            </ul>
+
+            <div class="image-container">
+
+                <a href="Artwork/gurang.jpg" class="image Artworks">
+                    <img src="Artwork/gurang.jpg" alt="">
+                </a>
+                <a href="Artwork/halo.jpg" class="image Artworks">
+                    <img src="Artwork/halo.jpg" alt="">
+                </a>
+                <a href="Artwork/jeo.jpg" class="image Artworks">
+                    <img src="Artwork/jeo.jpg" alt="">
+                </a>
+                <a href="Artwork/kamay.jpg" class="image Artworks">
+                    <img src="Artwork/kamay.jpg" alt="">
+                </a>
+                <a href="Artwork/wet.jpg" class="image Artworks">
+                    <img src="Artwork/wet.jpg" alt="">
+                </a>
+
+                <a href="Edit/Evee.png" class="image Edits">
+                    <img src="Edit/Evee.png" alt="">
+                </a>
+                <a href="Edit/FINAL DIN.jpg" class="image Edits">
+                    <img src="Edit/FINAL DIN.jpg" alt="">
+                </a>
+                <a href="Edit/final.jpg" class="image Edits">
+                    <img src="Edit/final.jpg" alt="">
+                </a>
+                <a href="Edit/sala.png" class="image Edits">
+                    <img src="Edit/sala.png" alt="">
+                </a>
+
+                <a href="Photography/bato.jpg" class="image Photography">
+                    <img src="Photography/bato.jpg" alt="">
+                </a>
+                <a href="Photography/jeep.jpg" class="image Photography">
+                    <img src="Photography/jeep.jpg" alt="">
+                </a>
+                <a href="Photography/salamin.jpg" class="image Photography">
+                    <img src="Photography/salamin.jpg" alt="">
+                </a>
+                <a href="Photography/kotse.jpg" class="image Photography">
+                    <img src="Photography/kotse.jpg" alt="">
+                </a>
+                
+
+            </div>
+
+        </div> 
+
+        <!-- jquery cdn link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <!-- magnific popup js cdn link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+        <script>
+
+            $(document).ready(function(){
+
+                $('.buttons').click(function(){
+
+                    $(this).addClass('active').siblings().removeClass('active');
+
+                    var filter = $(this).attr('data-filter')
+
+                    if(filter == 'all'){
+                        $('.image').show(400);
+                    }else{
+                        $('.image').not('.'+filter).hide(200);
+                        $('.image').filter('.'+filter).show(400);
+                    }
+
+                });
+
+                $('.gallery').magnificPopup({
+
+                    delegate: 'a',
+                    type: 'image',
+                    gallery:{
+                        enabled:true
+                    }
+
+                });
+
+            });
+            
+        </script>
+
+    </section>
+
+    <!--Contact Section--->
+    <section class="contact" id="contact">
+        <div class="left-contact">
+            <div class="in">
+                <i class='bx bxs-palette' ></i>
+                <h4>Traditional</h4>
+            </div>
+
+            <div class="in">
+                <i class='bx bxs-mouse-alt' ></i>
+                <h4>Editing</h4>
+            </div>
+
+            <div class="in">
+                <i class='bx bxs-camera'></i>
+                <h4>Photography</h4>
+            </div>
+
+        </div>
+
+        <div class="righ-contact">
+            <h2>Profiles</h2>
+            <a href="#contact">Hire Me</a>
+            <p>As a seasoned traditional artist, editor, and photographer, I bring a unique blend of creative skills and meticulous attention to detail to every project.
+            With years of experience in capturing striking visual moments, retouching and enhancing images, and creating original artworks, 
+            I am dedicated to producing captivating and high-quality content. I am committed to collaborating closely with clients to bring their vision to life and deliver exceptional results that exceed expectations.</p>
+        </div>
+    </section>
+
+    <!--end Section--->
+    <section class="end-section">
+        <h3>Hajji Talagtag</h3>
+        <p>For more Tutorial about Traditional Art, Editing and Photography - Please click on the <br> link below to Subscribe My Channel</p>
+        <div class="end-icons">
+            <a href="https://www.facebook.com/profile.php?id=61553604059708"><i class='bx bxl-facebook'></i></a>
+            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F_u%2Fji_gallery_%3Ffbclid%3DIwAR0mJQHEu2uI7h9MdgQQcUauFovW3o-rsW8AzMvrMuHm4PEbV8MOTYWVQSo&h=AT1lvgWQtmgCoFw13oI_6KrEOqoo77MMUKf6VqLFoPPOB-HhmdLt9IkYcDKOLZn8T2trYE0T2nYcCfS7IMAMQRBCsfDby2ZWLKcD6SJ62aQE8g6xg_91FkiJSdJ_yQSCDuzGJYghooC6__pn"><i class='bx bxl-instagram-alt' ></i></a>
+            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.tiktok.com%2F%40ji_gallery%3F_t%3D8iJ9vJn2zqR%26_r%3D1%26fbclid%3DIwAR3gL-gNASmDA345gziR0jF0PC5S5Kxqoznv8guj8qv_YjAD_DyT2d3zetM&h=AT2QrMKRwL29pmqBuHYtpr2fxaNwG4PAXmco2ZSVI3nxkRaPvU3zMIizIVoWEPWUeDWkDogE7M-8gX3WriN4s7ODntqngHTb-J3_q_4wgJZAOqvxau8HWQZTFk4vJfNiXI1oJVMfSxoE-4k"><i class='bx bxl-tiktok' ></i></a>
+        </div>
+    </section>
+
+    <!--scroll btn--->
+    <a href="#" class="scroll-bttn"><i class='bx bx-chevron-up' ></i></a>
+
+    <!--custom js file link--->
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
